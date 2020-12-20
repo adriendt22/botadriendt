@@ -14,7 +14,7 @@ module.exports.run = async (client, message) => {
 
     message.delete(),
 
-    client.channels.cache.get('789998267949645876').send(embed);
+    message.channel.send(embed);
 
 };
 
