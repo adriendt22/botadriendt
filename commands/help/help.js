@@ -29,6 +29,7 @@ module.exports.run = (client, message, args) => {
     const embed = new MessageEmbed()
     .setColor("#36393f")
     .setTitle(`\`${command.help.name}\``)
+    .setThumbnail("https://i.imgur.com/HNfSGe9.png")
     .addField("Description", `${command.help.description}`)
     .addField("Utilisation", command.help.usage ? `${PREFIX}${command.help.name} ${command.help.usage}` : `${PREFIX}${command.help.name}`, true)
 

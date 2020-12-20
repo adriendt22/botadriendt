@@ -1,5 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
-const { FOOTER, FOOTERI } = require('./../../config');
+const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
 module.exports.run = (client, message, args) => {
   
@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
     .setColor("#000000")
     .setAuthor(`Annonce de ${member}`)
     .setDescription(arg)
-    .setThumbnail("https://i.imgur.com/TEl2ItS.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI)
     .setTimestamp(new Date());
 
@@ -28,7 +28,7 @@ module.exports.help = {
   description: "Faire une annonce",
   cooldown: 10,
   usage: '<message>',
-  isUserAdmin1: false,
-  permissions: false,
+  isUserAdmin: false,
+  permissions: true,
   args: true
 };

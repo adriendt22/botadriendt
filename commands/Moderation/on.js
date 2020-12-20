@@ -1,5 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
-const { FOOTER, FOOTERI } = require('./../../config');
+const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
 module.exports.run = async (client, message) => {
 
@@ -7,14 +7,14 @@ module.exports.run = async (client, message) => {
     .setAuthor(message.member.user.tag)
     .setColor("#35f092")
     .setTitle(":white_check_mark: Serveur ouvert !")
-    .setDescription("```Vous pouvez maintenant vous connecter au serveur via l'ip 185.157.246.250 et profite de votre nouvelle vie ! Cordialement le staff de Nosria ❤️```")
+    .setDescription("```Vous pouvez maintenant vous connecter au serveur via l'ip IP et profite de votre nouvelle vie ! Cordialement le staff de SullyLand ❤️```")
     .setTimestamp()
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI);
 
     message.delete(),
 
-    client.channels.cache.get('762733000176959518').send(embed);
+    client.channels.cache.get('789998267949645876').send(embed);
 
 };
 

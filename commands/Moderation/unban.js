@@ -10,12 +10,12 @@ module.exports.run = async (client, message, args) => {
     .setColor("#35f092")
     .setDescription(`**Action**: Unban`)
     .setTimestamp()
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail("https://i.imgur.com/HNfSGe9.png")
     .setFooter(message.author.username, message.author.avatarURL());
 
     message.delete(),
 
-    client.channels.cache.get('763706320205381632').send(embed);
+    client.channels.cache.get('789998267282489373').send(embed);
 
 };
 
@@ -26,7 +26,7 @@ module.exports.help = {
   description: "unban un utilisateur",
   cooldown: 10,
   usage: '<user_id>',
-  isUserAdmin1: false,
+  isUserAdmin: false,
   permissions: true,
   args: true
 };

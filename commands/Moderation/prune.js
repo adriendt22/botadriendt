@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
   if (message.lenght === 1) await messages[0].delete();
   else await message.channel.bulkDelete(messages);
-  const { FOOTER, FOOTERI } = require('./../../config');
+  const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
   await message.channel.bulkDelete(messages);
 
@@ -23,12 +23,12 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(message.author.username, message.author.avatarURL())
     .setColor("#0AFFF8")
     .setDescription(`**Action**: prune\n**Nbr de message**: ${args[1]}\n**Utilisateur**: ${args[0]}`)
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI);
 
     message.delete();
 
-    client.channels.cache.get('681130401040695303').send(embed);
+    client.channels.cache.get('789998267680555018').send(embed);
 
 };
 

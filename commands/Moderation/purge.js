@@ -1,5 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
-const { FOOTER, FOOTERI } = require('./../../config');
+const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
 module.exports.run = async (client, message, args) => {
   if (isNaN(args[0]) || (args[0] < 1 || args[0] > 100)) return message.reply('il faut spécifier un ***nombre*** entre 1 et 100');
@@ -15,12 +15,12 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(message.author.username, message.author.avatarURL())
     .setColor("#0AFFF8")
     .setDescription(`**Action**: purge\n**Nbr de message**: ${args[0]}\n**Salon**: ${message.channel}`)
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI);
 
     message.delete();
 
-    client.channels.cache.get('681130401040695303').send(embed);
+    client.channels.cache.get('789998267680555018').send(embed);
 
 };
 

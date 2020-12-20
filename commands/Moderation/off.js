@@ -1,5 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
-const { FOOTER, FOOTERI } = require('./../../config');
+const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
 module.exports.run = async (client, message) => {
 
@@ -7,14 +7,14 @@ module.exports.run = async (client, message) => {
     .setAuthor(message.member.user.tag)
     .setColor("#FF004D")
     .setTitle(':x: **Serveur fermer** !')
-    .setDescription("```Le serveur est fermé actuellement veuillez attendre l'annonce de la réouverture ! Cordialement le staff de Nosria ❤️```")
+    .setDescription("```Le serveur est fermé actuellement veuillez attendre l'annonce de la réouverture ! Cordialement le staff de SullyLand ❤️```")
     .setTimestamp()
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI);
 
     message.delete(),
 
-    client.channels.cache.get('762733000176959518').send(embed);
+    client.channels.cache.get('789998267949645876').send(embed);
 
 };
 
