@@ -1,5 +1,5 @@
-const { Client, Collection } = require('discord.js');
-const { TOKEN, HOST, PORT, GAME } = require('./config');
+const { Client, Collection, MessageEmbed } = require('discord.js');
+const { TOKEN, HOST, PORT, GAME, FOOTER, FOOTERI } = require('./config');
 const { readdirSync } = require("fs");
 const Gamedig = require('gamedig');
 
