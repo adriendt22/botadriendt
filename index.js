@@ -51,7 +51,7 @@ client.on('ready', () => {
 });
 
 client.on("messageDelete", async message => {
-  const logChannel = message.guild.channels.cache.find(c => c.name === "testyo")
+  const logChannel = message.guild.channels.cache.find(c => c.name === "🪐・delete-message")
   if (!logChannel) return;
 
   const embed = new MessageEmbed()
