@@ -50,6 +50,22 @@ client.on('ready', () => {
   }, 5000);
 });
 
+client.on("messageDelete", async message => {
+  const logChannel = message.guild.channels.cache.find(c => c.name === "testyo")
+  if (!logChannel) return;
+
+  const embed = new MessageEmbed()
+  .setTitle(`Message effacé de | ${message.author.tag}`)
+  .setColor("RANDOM")
+  .addField('Message', `${message}`)
+  .addField('Message ID', `${message.id}`)
+  .addField('Message effacé dans le salon', `${message.channel}`)
+  .addField('Message effacé à', `${message.createdAt}`)
+  .setFooter(FOOTER, FOOTERI)
+
+  logChannel.send(embed)
+})
+
 loadCommands();
 loadEvents();
 
