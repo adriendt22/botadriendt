@@ -1,4 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
+const { THUMBAIL } = require("../../config");
 
 module.exports.run = async (client, message, args) => {
   const user = await client.users.fetch(args[0]);
@@ -10,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("#35f092")
     .setDescription(`**Action**: Unban`)
     .setTimestamp()
-    .setThumbnail("https://i.imgur.com/HNfSGe9.png")
+    .setThumbnail(THUMBAIL)
     .setFooter(message.author.username, message.author.avatarURL());
 
     message.delete(),
