@@ -56,6 +56,7 @@ client.on("messageDelete", async message => {
 
   const embed = new MessageEmbed()
   .setTitle(`Message effacé de | ${message.author.tag}`)
+  .setThumbnail(THUMBAIL)
   .setColor("RANDOM")
   .addField('Message', `${message}`)
   .addField('Message ID', `${message.id}`)
