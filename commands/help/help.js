@@ -2,13 +2,14 @@ const { MessageEmbed } = require ("discord.js");
 const { PREFIX } = require("../../config")
 const { readdirSync } = require("fs");
 const categoryList = readdirSync('./commands');
-const { FOOTER, FOOTERI } = require('./../../config');
+const { FOOTER, FOOTERI, THUMBAIL } = require('./../../config');
 
 module.exports.run = (client, message, args) => {
 
   if (!args.length) {
     const embed = new MessageEmbed()
     .setColor("#36393f")
+    .setThumbnail(THUMBAIL)
     .setFooter(FOOTER, FOOTERI)
     .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponibles et leur commandes.\nPour plus d'informations sur une commande, tapez \`${PREFIX}help <command_name>\``)
 
