@@ -1,5 +1,5 @@
 const { MessageEmbed } = require ("discord.js");
-const { THUMBAIL } = require("../../config");
+const { THUMBAIL } = require("./../../config");
 
 module.exports.run = async (client, message, args) => {
   const user = await client.users.fetch(args[0]);
